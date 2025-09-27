@@ -1,0 +1,50 @@
+
+{
+  "statistics": {
+    "agricultureTypes": [
+      { "name": "Rain-fed", "value": 85, "color": "#A67C52" },
+      { "name": "Irrigated", "value": 10, "color": "#1E3859" },
+      { "name": "Greenhouses", "value": 5, "color": "#3A7D44" }
+    ],
+    "waterConsumption": [
+      { "name": "Drip Irrigation", "value": 75 },
+      { "name": "Sprinkler", "value": 15 },
+      { "name": "Surface/Flood", "value": 10 }
+    ],
+    "cropProduction": [
+      { "year": 2018, "Tomatoes": 950, "Olives": 180, "Wheat": 60 },
+      { "year": 2019, "Tomatoes": 980, "Olives": 200, "Wheat": 55 },
+      { "year": 2020, "Tomatoes": 1020, "Olives": 190, "Wheat": 70 },
+      { "year": 2021, "Tomatoes": 1050, "Olives": 210, "Wheat": 65 },
+      { "year": 2022, "Tomatoes": 1100, "Olives": 205, "Wheat": 75 }
+    ]
+  },
+  "crops": [
+    { "id": 1, "name": "Olive", "type": "fruit", "rarity": "common", "image": "https://picsum.photos/seed/olive/400/300", "description": "A cornerstone of Jordanian agriculture and cuisine, olives are grown across the country, especially in the northern highlands. Jordan is among the top ten olive producers in the world." },
+    { "id": 2, "name": "Tomato", "type": "vegetable", "rarity": "common", "image": "https://picsum.photos/seed/tomato/400/300", "description": "Jordan's most produced vegetable, grown in open fields and greenhouses, primarily in the Jordan Valley. It is a key export crop." },
+    { "id": 3, "name": "Date Palm", "type": "fruit", "rarity": "common", "image": "https://picsum.photos/seed/datepalm/400/300", "description": "Cultivated in the Jordan Valley and eastern desert areas, dates, especially the Medjool variety, are a high-value crop for export and local consumption." },
+    { "id": 4, "name": "Wheat", "type": "cereal", "rarity": "common", "image": "https://picsum.photos/seed/wheat/400/300", "description": "A strategic cereal crop grown in rain-fed areas like Irbid and Madaba. Local production covers only a small fraction of the national demand." },
+    { "id": 5, "name": "Barley", "type": "cereal", "rarity": "common", "image": "https://picsum.photos/seed/barley/400/300", "description": "A drought-tolerant cereal used mainly for animal feed. It plays a crucial role in supporting the country's livestock sector." },
+    { "id": 6, "name": "Cucumber", "type": "vegetable", "rarity": "common", "image": "https://picsum.photos/seed/cucumber/400/300", "description": "Widely grown in greenhouses, cucumbers are a staple in the local diet and a significant agricultural export." }
+  ],
+  "plants": [
+    { "id": 7, "name": "Saffron", "type": "herb", "rarity": "rare", "image": "https://picsum.photos/seed/saffron/400/300", "description": "A high-value crop being experimentally grown in Jordan. Its low water requirement makes it a promising plant for arid regions." },
+    { "id": 8, "name": "Black Iris", "type": "flower", "rarity": "rare", "image": "https://picsum.photos/seed/iris/400/300", "description": "The national flower of Jordan. While not a food crop, its conservation is part of preserving Jordan's unique biodiversity." },
+    { "id": 9, "name": "Sage (Maramiyyeh)", "type": "herb", "rarity": "common", "image": "https://picsum.photos/seed/sage/400/300", "description": "A popular medicinal and culinary herb found in many Jordanian homes. It grows wild in the mountains and is also cultivated." },
+    { "id": 10, "name": "Quinoa", "type": "cereal", "rarity": "rare", "image": "https://picsum.photos/seed/quinoa/400/300", "description": "Introduced as a potential strategic crop due to its nutritional value and tolerance to saline water and soil, helping diversify Jordan's food sources." }
+  ],
+  "irrigation": [
+    { "id": 1, "name": "Drip Irrigation", "image": "https://picsum.photos/seed/drip/400/300", "description": "The most efficient method, delivering water directly to the plant's roots. It saves water and reduces weed growth. Widely promoted and used in Jordan, especially in the Jordan Valley for vegetables and fruit trees." },
+    { "id": 2, "name": "Sprinkler Irrigation", "image": "https://picsum.photos/seed/sprinkler/400/300", "description": "Water is sprayed over the fields, mimicking rainfall. It is less efficient than drip irrigation due to evaporation losses but is suitable for cereal crops in large, flat areas." },
+    { "id": 3, "name": "Surface (Flood) Irrigation", "image": "https://picsum.photos/seed/flood/400/300", "description": "A traditional and the least efficient method, where water flows over the land. It is being phased out in favor of more water-saving technologies due to Jordan's severe water scarcity." }
+  ],
+  "verticalFarming": [
+    { "id": 1, "name": "Amman Hydroponics Initiative", "image": "https://picsum.photos/seed/hydroponics/400/300", "description": "A project focused on growing leafy greens and herbs in controlled indoor environments using hydroponic systems. It aims to supply fresh produce to urban markets with minimal water usage." },
+    { "id": 2, "name": "Wadi Rum Aquaponics Project", "image": "https://picsum.photos/seed/aquaponics/400/300", "description": "An innovative system that combines fish farming (aquaculture) with soilless plant cultivation (hydroponics). Fish waste provides nutrients for the plants, and the plants filter the water for the fish." }
+  ],
+  "plantDiseases": [
+    { "id": 1, "name": "Olive Fly (Bactrocera oleae)", "image": "https://picsum.photos/seed/olivefly/400/300", "description": "A major pest affecting olive crops. The larvae feed on the fruit, reducing both the quality and quantity of olive oil. Management includes trapping and biological control methods." },
+    { "id": 2, "name": "Tomato Yellow Leaf Curl Virus (TYLCV)", "image": "https://picsum.photos/seed/tylcv/400/300", "description": "A devastating viral disease of tomatoes, transmitted by whiteflies. It causes stunting, leaf yellowing, and curling, leading to severe yield loss. Control relies on resistant varieties and pest management." },
+    { "id": 3, "name": "Powdery Mildew", "image": "https://picsum.photos/seed/mildew/400/300", "description": "A fungal disease affecting a wide range of plants, including grapes and cucumbers. It appears as white powdery spots on leaves and stems, hindering photosynthesis and reducing crop vitality." }
+  ]
+}
