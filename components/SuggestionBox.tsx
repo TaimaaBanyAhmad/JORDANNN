@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { GoogleGenAI } from "@google/genai";
 
 const SuggestionBox: React.FC = () => {
   const [suggestion, setSuggestion] = useState('');
@@ -8,7 +7,7 @@ const SuggestionBox: React.FC = () => {
   const [response, setResponse] = useState<string | null>(null);
   const [submittedSuggestion, setSubmittedSuggestion] = useState<string | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!suggestion.trim()) {
       setError('Please enter a suggestion.');
@@ -20,24 +19,19 @@ const SuggestionBox: React.FC = () => {
     setResponse(null);
     setSubmittedSuggestion(suggestion);
 
-    try {
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-      const prompt = `You are an expert on Jordanian food security. A user has provided the following suggestion: "${suggestion}". Briefly and positively respond to this suggestion in one or two encouraging and informative sentences, relating it to Jordan's current situation or agricultural strategies.`;
-      
-      const result = await ai.models.generateContent({
-        model: 'gemini-2.5-flash',
-        contents: prompt,
-      });
-
-      setResponse(result.text);
-
-    } catch (err) {
-      console.error(err);
-      setError('Sorry, there was an error getting a response. Please try again later.');
-    } finally {
-      setLoading(false);
-      setSuggestion('');
-    }
+    // Simulate an API call
+    setTimeout(() => {
+      try {
+        const cannedResponse = "Thank you for your valuable suggestion! Ideas like yours are crucial for fostering innovation in Jordan's agricultural sector. This has been noted for further consideration.";
+        setResponse(cannedResponse);
+      } catch (err) {
+        console.error(err);
+        setError('Sorry, there was an error submitting your suggestion. Please try again later.');
+      } finally {
+        setLoading(false);
+        setSuggestion('');
+      }
+    }, 1500); // Simulate network delay
   };
 
   return (
@@ -64,7 +58,7 @@ const SuggestionBox: React.FC = () => {
               className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-jordan-green hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-jordan-green disabled:bg-gray-400"
               disabled={loading}
             >
-              {loading ? 'Thinking...' : 'Submit & Get AI Feedback'}
+              {loading ? 'Submitting...' : 'Submit Suggestion'}
             </button>
           </div>
         </form>
@@ -83,7 +77,7 @@ const SuggestionBox: React.FC = () => {
             <p className="italic">"{submittedSuggestion}"</p>
           </div>
           <div className="bg-light-card dark:bg-dark-card p-6 rounded-lg shadow-md border-l-4 border-jordan-green">
-            <h3 className="font-semibold text-lg">AI Feedback:</h3>
+            <h3 className="font-semibold text-lg">Feedback:</h3>
             <p>{response}</p>
           </div>
         </div>
